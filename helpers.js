@@ -20,3 +20,13 @@ function key(keyCode, f) {
     }
   })
 }
+
+var raphael = Raphael(0,0,1000,1000)
+
+function image(path) {
+  return raphael.image(path, 0, 400, 100, 100)
+}
+
+function move(thing, x) {
+  thing.animate({x : x * 50}, 100)
+}
