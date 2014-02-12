@@ -3,8 +3,10 @@ function title(newTitle) {
   $("h1").text(newTitle)
 }
 
-function tell(message) {
-  $("body").append($("<div>").addClass("message").text(message))
+function tell() {
+  Array.prototype.slice.apply(arguments).forEach(function(message) {
+    $("body").append($("<div>").addClass("message").text(message))
+  })
 }
 
 function later(delay, f) {
